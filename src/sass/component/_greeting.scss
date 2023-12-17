@@ -1,0 +1,74 @@
+.greeting {
+  padding-top: 36px;
+}
+.title_greeting {
+  font-family: $flow;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #959595;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+.logo_greeting {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+}
+.cupcake_box {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translatey(-50%);
+    width: calc(50% - 20px);
+    height: 2px;
+    background: #cdcdcd;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translatey(-50%);
+    width: calc(50% - 20px);
+    height: 2px;
+    background: #cdcdcd;
+  }
+}
+.cupcake_greeting {
+  margin: auto;
+}
+.man_greeting {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: -500px;
+    z-index: 2;
+    transition: left 1000ms ease;
+    &.is_loading {
+      left: 0;
+      transition: left 1000ms ease;
+    }
+  }
+}
+.girl_greeting {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    right: -500px;
+    transition: right 1000ms ease;
+    &.is_loading {
+      right: 0;
+      transition: right 1000ms ease;
+    }
+  }
+}

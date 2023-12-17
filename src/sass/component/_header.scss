@@ -1,0 +1,52 @@
+h1 {
+  font-size: 32px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 72px;
+  }
+}
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  font-family: $flow;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+header {
+  padding-top: 170px;
+  padding-bottom: 240px;
+  position: relative;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('../images/images/board-480.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $colorSecondText;
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/images/board-768.png');
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/images/board.png');
+    background-repeat: repeat;
+  }
+}
+.flag {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+}

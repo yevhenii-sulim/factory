@@ -1,0 +1,37 @@
+{
+  "name": "factory",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://evgeniy210191.github.io/factory/",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /factory/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgeniy210191/factory.git"
+  },
+  "keywords": [],
+  "author": "Team Lead Sulim Evgeniy bees127@ukr.net and team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evgeniy210191/factory"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.1.15",
+    "modern-normalize": "^1.1.0",
+    "postcss": "^8.4.23",
+    "sass": "^1.62.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@parcel/transformer-sass": "^2.6.0",
+    "autoprefixer": "^9.8.8",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 3 versions, not dead"
+}
