@@ -636,6 +636,8 @@ address {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: left;
+  width: 100%;
+  padding: 0 40px;
 }
 address a {
   text-decoration: none;
@@ -667,6 +669,9 @@ address svg {
           align-items: center;
 }
 
+.contact {
+  width: 100%;
+}
 .contact a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,25 +996,35 @@ button[data-atribute=next-switch]:active {
 }
 
 .bread_with_egg {
-  position: absolute;
-  top: 0;
-  left: -200%;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  display: none;
 }
-.bread_with_egg.is_loading {
-  left: 0;
+@media screen and (min-width: 768px) {
+  .bread_with_egg {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_egg.is_loading {
+    left: 0;
+  }
 }
 
 .bread_with_cheese {
-  position: absolute;
-  bottom: 0;
-  right: -200%;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  display: none;
 }
-.bread_with_cheese.is_loading {
-  right: 0;
+@media screen and (min-width: 768px) {
+  .bread_with_cheese {
+    position: absolute;
+    bottom: 0;
+    right: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_cheese.is_loading {
+    right: 0;
+  }
 }
 
 footer .container {
@@ -1062,6 +1077,8 @@ address {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: left;
+  width: 100%;
+  padding: 0 40px;
 }
 address a {
   text-decoration: none;
@@ -1093,6 +1110,9 @@ address svg {
           align-items: center;
 }
 
+.contact {
+  width: 100%;
+}
 .contact a {
   display: -webkit-box;
   display: -ms-flexbox;

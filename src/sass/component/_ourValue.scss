@@ -93,20 +93,26 @@ button[data-atribute='next-switch'] {
   }
 }
 .bread_with_egg {
-  position: absolute;
-  top: 0;
-  left: -200%;
-  transition: all 500ms ease;
-  &.is_loading {
-    left: 0;
+  display: none;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    transition: all 500ms ease;
+    &.is_loading {
+      left: 0;
+    }
   }
 }
 .bread_with_cheese {
-  position: absolute;
-  bottom: 0;
-  right: -200%;
-  transition: all 500ms ease;
-  &.is_loading {
-    right: 0;
+  display: none;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    right: -200%;
+    transition: all 500ms ease;
+    &.is_loading {
+      right: 0;
+    }
   }
 }
