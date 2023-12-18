@@ -898,6 +898,9 @@ section.benefits {
   color: #7d7d7d;
   margin-bottom: 60px;
 }
+.about_value p:not(:last-child) {
+  margin-bottom: 42px;
+}
 
 .our_project {
   display: inline-block;

@@ -21,6 +21,9 @@
   font-size: 24px;
   color: #7d7d7d;
   margin-bottom: 60px;
+  p:not(:last-child) {
+    margin-bottom: 42px;
+  }
 }
 .our_project {
   display: inline-block;
