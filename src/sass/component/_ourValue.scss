@@ -94,7 +94,8 @@ button[data-atribute='next-switch'] {
 }
 .bread_with_egg {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    display: block;
     position: absolute;
     top: 0;
     left: -200%;
@@ -106,7 +107,8 @@ button[data-atribute='next-switch'] {
 }
 .bread_with_cheese {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    display: block;
     position: absolute;
     bottom: 0;
     right: -200%;

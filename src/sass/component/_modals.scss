@@ -25,6 +25,7 @@
   }
 }
 .modal {
+  position: relative;
   width: 80%;
   display: inline-block;
   background: $colorSecondText;
@@ -50,4 +51,16 @@
   text-indent: 30px;
   margin-top: 20px;
   text-align: left;
+}
+[data-atribute='close'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: translate(-20px, 20px);
+  border: none;
+  outline: none;
+  background: url('../images/svg/closeMenu.svg') center no-repeat;
+  cursor: pointer;
 }

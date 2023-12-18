@@ -31,10 +31,10 @@ const widthBoxList = aboutTechnique.offsetWidth;
 const listElementsProject = boxProjectsElement.children;
 let position = 0;
 prev.addEventListener('click', () =>
-  turnCaruselPrev(boxTechnique, widthBoxList)
+  turnCaruselPrev(boxTechnique, aboutTechnique)
 );
 next.addEventListener('click', () =>
-  turnCaruselNext(boxTechnique, widthBoxList)
+  turnCaruselNext(boxTechnique, aboutTechnique)
 );
 
 prevSwitch.addEventListener('click', () =>
@@ -60,6 +60,7 @@ function resizeourProject() {
 }
 
 function turnCaruselPrev(box, witdthBox) {
+  console.log(box, witdthBox);
   let count = box.offsetLeft;
   if (box.offsetLeft >= 0) {
     box.style.left =
@@ -97,7 +98,10 @@ function openModal() {
 }
 
 function onCloseModal(event) {
-  if (event.target.classList[0] === 'backdrop') {
+  if (
+    event.target.classList[0] === 'backdrop' ||
+    event.target.dataset.atribute === 'close'
+  ) {
     const modal = document.querySelector('.backdrop.is_open');
     if (modal) {
       modal.classList.remove('is_open');

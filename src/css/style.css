@@ -623,6 +623,7 @@ footer .container {
 
 .address {
   position: relative;
+  display: inline-block;
 }
 .address img {
   margin: auto;
@@ -714,6 +715,7 @@ address svg {
 }
 
 .modal {
+  position: relative;
   width: 80%;
   display: inline-block;
   background: #ffffff;
@@ -743,6 +745,20 @@ address svg {
   text-indent: 30px;
   margin-top: 20px;
   text-align: left;
+}
+
+[data-atribute=close] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translate(-20px, 20px);
+          transform: translate(-20px, 20px);
+  border: none;
+  outline: none;
+  background: url("../images/svg/closeMenu.svg") center no-repeat;
+  cursor: pointer;
 }
 
 section.benefits {
@@ -998,8 +1014,9 @@ button[data-atribute=next-switch]:active {
 .bread_with_egg {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .bread_with_egg {
+    display: block;
     position: absolute;
     top: 0;
     left: -200%;
@@ -1014,8 +1031,9 @@ button[data-atribute=next-switch]:active {
 .bread_with_cheese {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .bread_with_cheese {
+    display: block;
     position: absolute;
     bottom: 0;
     right: -200%;
@@ -1064,6 +1082,7 @@ footer .container {
 
 .address {
   position: relative;
+  display: inline-block;
 }
 .address img {
   margin: auto;
