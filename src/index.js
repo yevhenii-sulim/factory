@@ -60,7 +60,6 @@ function resizeourProject() {
 }
 
 function turnCaruselPrev(box, witdthBox) {
-  console.log(box, witdthBox);
   let count = box.offsetLeft;
   if (box.offsetLeft >= 0) {
     box.style.left =
@@ -129,7 +128,6 @@ let target = document.querySelector('[data-atrebute="myRootGreeting"]');
 observer.observe(target);
 
 function addClass(entries, observer) {
-  console.log(entries, observer);
   entries.forEach(element => {
     if (element.isIntersecting) {
       document.querySelector('.man_greeting').classList.add('is_loading');

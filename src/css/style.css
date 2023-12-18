@@ -307,10 +307,10 @@ header {
   content: "";
   position: absolute;
   top: 50%;
-  left: -10%;
+  left: 0%;
   -webkit-transform: translatey(-50%);
           transform: translatey(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -318,10 +318,10 @@ header {
   content: "";
   position: absolute;
   top: 50%;
-  right: -10%;
+  right: 0%;
   -webkit-transform: translatey(-50%);
           transform: translatey(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -599,10 +599,10 @@ footer .container {
   content: "";
   position: absolute;
   top: 50%;
-  left: -10%;
+  left: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -610,10 +610,10 @@ footer .container {
   content: "";
   position: absolute;
   top: 50%;
-  right: -10%;
+  right: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -670,7 +670,11 @@ address ul {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  padding-left: 80px;
+}
+@media screen and (min-width: 768px) {
+  address ul {
+    padding-left: 80px;
+  }
 }
 address svg {
   fill: #7d7d7d;
@@ -1070,10 +1074,10 @@ footer .container {
   content: "";
   position: absolute;
   top: 50%;
-  left: -10%;
+  left: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -1081,10 +1085,10 @@ footer .container {
   content: "";
   position: absolute;
   top: 50%;
-  right: -10%;
+  right: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: calc(50% - 20px);
+  width: calc(40% - 20px);
   height: 2px;
   background: #cdcdcd;
 }
@@ -1141,7 +1145,11 @@ address ul {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  padding-left: 80px;
+}
+@media screen and (min-width: 768px) {
+  address ul {
+    padding-left: 80px;
+  }
 }
 address svg {
   fill: #7d7d7d;

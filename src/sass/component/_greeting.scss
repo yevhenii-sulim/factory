@@ -23,9 +23,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: -10%;
+    left: -0%;
     transform: translatey(-50%);
-    width: calc(50% - 20px);
+    width: calc(40% - 20px);
     height: 2px;
     background: #cdcdcd;
   }
@@ -33,9 +33,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: -10%;
+    right: -0%;
     transform: translatey(-50%);
-    width: calc(50% - 20px);
+    width: calc(40% - 20px);
     height: 2px;
     background: #cdcdcd;
   }
