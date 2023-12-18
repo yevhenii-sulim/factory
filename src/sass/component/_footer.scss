@@ -34,9 +34,16 @@ footer {
 .address {
   position: relative;
   display: inline-block;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   img {
-    margin: auto;
-    height: 300px;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin: auto;
+      height: 300px;
+    }
   }
 }
 
@@ -63,6 +70,7 @@ address {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 80px;
   }
   svg {
     fill: #7d7d7d;
