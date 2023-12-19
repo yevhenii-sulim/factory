@@ -1061,6 +1061,126 @@ button[data-atribute=next-switch]:active {
   }
 }
 
+.show_at_project {
+  margin-bottom: 60px;
+}
+
+.arrow {
+  position: relative;
+  width: 10px;
+  height: 50px;
+  margin: auto;
+  -webkit-animation: 0.5s ease 0s infinite alternate arrow-transparent;
+          animation: 0.5s ease 0s infinite alternate arrow-transparent;
+}
+.arrow::before {
+  content: "";
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+  background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  width: 20px;
+  height: 30px;
+  -webkit-animation: 0.5s ease 0s infinite alternate arrowRight;
+          animation: 0.5s ease 0s infinite alternate arrowRight;
+}
+.arrow::after {
+  content: "";
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+  background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  width: 20px;
+  height: 30px;
+  -webkit-animation: 0.5s ease 0s infinite alternate arrowLeft;
+          animation: 0.5s ease 0s infinite alternate arrowLeft;
+}
+
+@-webkit-keyframes arrow-transparent {
+  0% {
+    background: #c8a674;
+  }
+  50% {
+    background: #ffff00;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+
+@keyframes arrow-transparent {
+  0% {
+    background: #c8a674;
+  }
+  50% {
+    background: #ffff00;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+@-webkit-keyframes arrowRight {
+  0% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffff00), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #ffff00 50%, white 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffffff), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #ffffff 50%, white 50%);
+  }
+}
+@keyframes arrowRight {
+  0% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffff00), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #ffff00 50%, white 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffffff), color-stop(50%, white));
+    background: linear-gradient(to right bottom, #ffffff 50%, white 50%);
+  }
+}
+@-webkit-keyframes arrowLeft {
+  0% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffff00), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #ffff00 50%, white 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffffff), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #ffffff 50%, white 50%);
+  }
+}
+@keyframes arrowLeft {
+  0% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffff00), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #ffff00 50%, white 50%);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffffff), color-stop(50%, white));
+    background: linear-gradient(to left bottom, #ffffff 50%, white 50%);
+  }
+}
 footer .container {
   position: relative;
   margin-top: 35px;
