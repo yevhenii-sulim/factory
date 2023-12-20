@@ -20,24 +20,27 @@
 .about_value {
   font-size: 24px;
   color: #7d7d7d;
-  margin-bottom: 60px;
-  p:not(:last-child) {
+  p {
+    margin-top: 42px;
     margin-bottom: 42px;
   }
 }
 .our_project {
-  display: inline-block;
   margin: auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 42px;
 }
 
 .box_project {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  transform: translatey(-50%);
-  display: flex;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
 }
 .switch_project {
   background: transparent;
@@ -46,6 +49,13 @@
   cursor: pointer;
   width: 40px;
   height: 30px;
+}
+.border_progect {
+  width: 100%;
+  height: 50px;
+  background-image: url('../images/images/border-project.png');
+  background-position: center;
+  background-repeat: repeat-x;
 }
 button[data-atribute='prev-switch'] {
   background-image: url(../images/images/arrow-prev.png);
@@ -65,122 +75,56 @@ button[data-atribute='next-switch'] {
 }
 
 .project_element {
-  padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  border-left: 0px solid #c8a674;
+  border-right: 0px solid #c8a674;
+  border-top: 0px solid #c8a674;
+  transition: border-right 200ms ease, border-left 200ms ease;
+  border-radius: 10px;
   img {
-    height: 175px;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
   }
-}
-.border_project {
-  width: 300px;
-  @media screen and (min-width: 768px) {
-    width: 600px;
+  &:hover p {
+    border: none;
+    padding-bottom: 1px;
+  }
+  // &::after {
+  //   content: '';
+  //   right: 0;
+  //   bottom: 0;
+  //   position: absolute;
+  //   width: 0%;
+  //   height: 2px;
+  //   border-radius: 0;
+  //   background: #c8a674;
+  //   transition: width 200ms ease;
+  // }
+  // &:hover::after {
+  //   width: 100%;
+  //   border-radius: 1px;
+  // }
+  &:hover {
+    border-left: 2px solid #c8a674;
+    border-right: 2px solid #c8a674;
   }
 }
 
 .sign_project {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-    font-size: 24px;
-    color: #7d7d7d;
-    font-family: $flow;
-  }
-}
-.bread_with_egg {
-  display: none;
+  border-bottom: 1px solid #959595;
+  font-size: 24px;
+  color: #7d7d7d;
+  font-family: $flow;
   @media screen and (min-width: 1200px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -200%;
-    transition: all 500ms ease;
-    &.is_loading {
-      left: 0;
-    }
-  }
-}
-.bread_with_cheese {
-  display: none;
-  @media screen and (min-width: 1200px) {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: -200%;
-    transition: all 500ms ease;
-    &.is_loading {
-      right: 0;
-    }
-  }
-}
-.show_at_project {
-  margin-bottom: 60px;
-}
-.arrow {
-  position: relative;
-  width: 10px;
-  height: 50px;
-  margin: auto;
-  animation: 0.5s ease 0s infinite alternate arrow-transparent;
-  &::before {
-    content: '';
-    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translatey(100%);
-    width: 20px;
-    height: 30px;
-    animation: 0.5s ease 0s infinite alternate arrowRight;
-  }
-  &::after {
-    content: '';
-    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translatey(100%);
-    width: 20px;
-    height: 30px;
-    animation: 0.5s ease 0s infinite alternate arrowLeft;
+    border-bottom: none;
   }
 }
 
-@keyframes arrow-transparent {
-  0% {
-    background: #c8a674;
-  }
-  50% {
-    background: #ffff00;
-  }
-  100% {
-    background: #ffffff;
-  }
-}
-@keyframes arrowRight {
-  0% {
-    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: linear-gradient(to right bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: linear-gradient(to right bottom, #ffffff 50%, white 50%);
-  }
-}
-@keyframes arrowLeft {
-  0% {
-    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: linear-gradient(to left bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: linear-gradient(to left bottom, #ffffff 50%, white 50%);
-  }
+.show_at_project {
+  margin-bottom: 60px;
 }

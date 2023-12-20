@@ -46,7 +46,6 @@
 .man_greeting {
   display: none;
   @media screen and (min-width: 1200px) {
-    display: block;
     position: absolute;
     bottom: -7px;
     left: -500px;
@@ -61,7 +60,6 @@
 .girl_greeting {
   display: none;
   @media screen and (min-width: 1200px) {
-    display: block;
     position: absolute;
     bottom: 45px;
     right: -500px;

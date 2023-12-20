@@ -335,7 +335,6 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .man_greeting {
-    display: block;
     position: absolute;
     bottom: -7px;
     left: -500px;
@@ -355,7 +354,6 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .girl_greeting {
-    display: block;
     position: absolute;
     bottom: 45px;
     right: -500px;
@@ -487,7 +485,7 @@ header {
 .box_about_technique ul {
   position: absolute;
   font-size: 0;
-  width: 950px;
+  width: 1200px;
   -webkit-transition: left 250ms ease;
   transition: left 250ms ease;
   text-align: left;
@@ -586,8 +584,10 @@ header {
   cursor: pointer;
 }
 
-footer .container {
+footer {
   position: relative;
+}
+footer .container {
   margin-top: 35px;
 }
 
@@ -699,6 +699,40 @@ address svg {
   gap: 5px;
 }
 
+.bread_with_egg {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .bread_with_egg {
+    position: absolute;
+    top: 25%;
+    left: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_egg.is_loading {
+    left: 0;
+    display: block;
+  }
+}
+
+.bread_with_cheese {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .bread_with_cheese {
+    position: absolute;
+    bottom: 0;
+    right: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_cheese.is_loading {
+    right: 0;
+    display: block;
+  }
+}
+
 .backdrop {
   position: fixed;
   display: none;
@@ -763,7 +797,7 @@ address svg {
   text-align: left;
 }
 
-[data-atribute=close] {
+#close {
   position: absolute;
   top: 0;
   right: 0;
@@ -933,28 +967,32 @@ section.benefits {
 .about_value {
   font-size: 24px;
   color: #7d7d7d;
-  margin-bottom: 60px;
 }
-.about_value p:not(:last-child) {
+.about_value p {
+  margin-top: 42px;
   margin-bottom: 42px;
 }
 
 .our_project {
-  display: inline-block;
   margin: auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 42px;
 }
 
 .box_project {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .box_project {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
 }
 
 .switch_project {
@@ -964,6 +1002,14 @@ section.benefits {
   cursor: pointer;
   width: 40px;
   height: 30px;
+}
+
+.border_progect {
+  width: 100%;
+  height: 50px;
+  background-image: url("../images/images/border-project.png");
+  background-position: center;
+  background-repeat: repeat-x;
 }
 
 button[data-atribute=prev-switch] {
@@ -985,8 +1031,6 @@ button[data-atribute=next-switch]:active {
 }
 
 .project_element {
-  padding-left: 100px;
-  padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,70 +1038,41 @@ button[data-atribute=next-switch]:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  border-left: 0px solid #c8a674;
+  border-right: 0px solid #c8a674;
+  border-top: 0px solid #c8a674;
+  -webkit-transition: border-right 200ms ease, border-left 200ms ease;
+  transition: border-right 200ms ease, border-left 200ms ease;
+  border-radius: 10px;
 }
 .project_element img {
-  height: 175px;
-}
-
-.border_project {
+  border-radius: 10px;
   width: 300px;
+  height: auto;
 }
-@media screen and (min-width: 768px) {
-  .border_project {
-    width: 600px;
-  }
+.project_element:hover p {
+  border: none;
+  padding-bottom: 1px;
+}
+.project_element:hover {
+  border-left: 2px solid #c8a674;
+  border-right: 2px solid #c8a674;
 }
 
 .sign_project {
-  display: none;
+  border-bottom: 1px solid #959595;
+  font-size: 24px;
+  color: #7d7d7d;
+  font-family: "flowregular";
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .sign_project {
-    display: block;
-    font-size: 24px;
-    color: #7d7d7d;
-    font-family: "flowregular";
-  }
-}
-
-.bread_with_egg {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .bread_with_egg {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-  }
-  .bread_with_egg.is_loading {
-    left: 0;
-  }
-}
-
-.bread_with_cheese {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .bread_with_cheese {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-  }
-  .bread_with_cheese.is_loading {
-    right: 0;
+    border-bottom: none;
   }
 }
 
@@ -1065,124 +1080,10 @@ button[data-atribute=next-switch]:active {
   margin-bottom: 60px;
 }
 
-.arrow {
+footer {
   position: relative;
-  width: 10px;
-  height: 50px;
-  margin: auto;
-  -webkit-animation: 0.5s ease 0s infinite alternate arrow-transparent;
-          animation: 0.5s ease 0s infinite alternate arrow-transparent;
-}
-.arrow::before {
-  content: "";
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-  background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  width: 20px;
-  height: 30px;
-  -webkit-animation: 0.5s ease 0s infinite alternate arrowRight;
-          animation: 0.5s ease 0s infinite alternate arrowRight;
-}
-.arrow::after {
-  content: "";
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-  background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  width: 20px;
-  height: 30px;
-  -webkit-animation: 0.5s ease 0s infinite alternate arrowLeft;
-          animation: 0.5s ease 0s infinite alternate arrowLeft;
-}
-
-@-webkit-keyframes arrow-transparent {
-  0% {
-    background: #c8a674;
-  }
-  50% {
-    background: #ffff00;
-  }
-  100% {
-    background: #ffffff;
-  }
-}
-
-@keyframes arrow-transparent {
-  0% {
-    background: #c8a674;
-  }
-  50% {
-    background: #ffff00;
-  }
-  100% {
-    background: #ffffff;
-  }
-}
-@-webkit-keyframes arrowRight {
-  0% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffff00), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffffff), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #ffffff 50%, white 50%);
-  }
-}
-@keyframes arrowRight {
-  0% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffff00), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffffff), color-stop(50%, white));
-    background: linear-gradient(to right bottom, #ffffff 50%, white 50%);
-  }
-}
-@-webkit-keyframes arrowLeft {
-  0% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffff00), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffffff), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #ffffff 50%, white 50%);
-  }
-}
-@keyframes arrowLeft {
-  0% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #c8a674), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #c8a674 50%, white 50%);
-  }
-  50% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffff00), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #ffff00 50%, white 50%);
-  }
-  100% {
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #ffffff), color-stop(50%, white));
-    background: linear-gradient(to left bottom, #ffffff 50%, white 50%);
-  }
 }
 footer .container {
-  position: relative;
   margin-top: 35px;
 }
 
@@ -1292,4 +1193,38 @@ address svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+
+.bread_with_egg {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .bread_with_egg {
+    position: absolute;
+    top: 25%;
+    left: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_egg.is_loading {
+    left: 0;
+    display: block;
+  }
+}
+
+.bread_with_cheese {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .bread_with_cheese {
+    position: absolute;
+    bottom: 0;
+    right: -200%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .bread_with_cheese.is_loading {
+    right: 0;
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

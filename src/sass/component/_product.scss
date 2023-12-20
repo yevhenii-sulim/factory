@@ -97,7 +97,7 @@
   ul {
     position: absolute;
     font-size: 0;
-    width: calc((230px * 4) + 30px);
+    width: calc((230px + 10px) * 5);
     transition: left 250ms ease;
     text-align: left;
     left: 0;

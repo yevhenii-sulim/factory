@@ -1,6 +1,6 @@
 footer {
+  position: relative;
   .container {
-    position: relative;
     margin-top: 35px;
   }
 }
@@ -87,5 +87,31 @@ address {
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+}
+.bread_with_egg {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 25%;
+    left: -200%;
+    transition: all 500ms ease;
+    &.is_loading {
+      left: 0;
+      display: block;
+    }
+  }
+}
+.bread_with_cheese {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    bottom: 0;
+    right: -200%;
+    transition: all 500ms ease;
+    &.is_loading {
+      right: 0;
+      display: block;
+    }
   }
 }
