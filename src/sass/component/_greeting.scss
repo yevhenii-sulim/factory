@@ -47,26 +47,30 @@
   display: none;
   @media screen and (min-width: 1200px) {
     position: absolute;
+    display: block;
     bottom: -7px;
-    left: -500px;
+    left: -25%;
     z-index: 2;
-    transition: left 1000ms ease;
+    opacity: 0;
+    transition: left 1000ms ease, opacity 2000ms ease;
     &.is_loading {
       left: 0;
-      transition: left 1000ms ease;
+      opacity: 1;
     }
   }
 }
 .girl_greeting {
   display: none;
   @media screen and (min-width: 1200px) {
+    display: block;
     position: absolute;
     bottom: 45px;
-    right: -500px;
-    transition: right 1000ms ease;
+    right: -25%;
+    opacity: 0;
+    transition: right 1000ms ease, opacity 2000ms ease;
     &.is_loading {
       right: 0;
-      transition: right 1000ms ease;
+      opacity: 1;
     }
   }
 }

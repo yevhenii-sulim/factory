@@ -100,12 +100,12 @@ address {
   display: none;
   @media screen and (min-width: 1200px) {
     position: absolute;
+    display: block;
     bottom: 7%;
     left: -25%;
+    transition: all 1000ms ease;
     z-index: 2;
     &.is_loading {
-      transition: all 500ms ease;
-      display: block;
       left: 0;
     }
   }
@@ -114,12 +114,12 @@ address {
   display: none;
   @media screen and (min-width: 1200px) {
     position: absolute;
+    display: block;
     bottom: 30%;
     right: -25%;
     z-index: 2;
+    transition: all 1000ms ease;
     &.is_loading {
-      transition: all 500ms ease;
-      display: block;
       right: 0;
     }
   }

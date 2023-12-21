@@ -332,16 +332,17 @@ header {
 @media screen and (min-width: 1200px) {
   .man_greeting {
     position: absolute;
+    display: block;
     bottom: -7px;
-    left: -500px;
+    left: -25%;
     z-index: 2;
-    -webkit-transition: left 1000ms ease;
-    transition: left 1000ms ease;
+    opacity: 0;
+    -webkit-transition: left 1000ms ease, opacity 2000ms ease;
+    transition: left 1000ms ease, opacity 2000ms ease;
   }
   .man_greeting.is_loading {
     left: 0;
-    -webkit-transition: left 1000ms ease;
-    transition: left 1000ms ease;
+    opacity: 1;
   }
 }
 
@@ -350,16 +351,17 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .girl_greeting {
+    display: block;
     position: absolute;
     bottom: 45px;
-    right: -500px;
-    -webkit-transition: right 1000ms ease;
-    transition: right 1000ms ease;
+    right: -25%;
+    opacity: 0;
+    -webkit-transition: right 1000ms ease, opacity 2000ms ease;
+    transition: right 1000ms ease, opacity 2000ms ease;
   }
   .girl_greeting.is_loading {
     right: 0;
-    -webkit-transition: right 1000ms ease;
-    transition: right 1000ms ease;
+    opacity: 1;
   }
 }
 
@@ -402,11 +404,15 @@ header {
   position: relative;
   display: inline-block;
   opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 .book_product.is_loading {
   opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .book_product .mark {
   position: absolute;
@@ -441,24 +447,22 @@ header {
 }
 
 .food_product {
-  display: none;
+  color: #7d7d7d;
+  opacity: 0;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
-@media screen and (min-width: 1200px) {
-  .food_product {
-    display: block;
-    color: #7d7d7d;
-  }
+.food_product.is_loading {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .food_product img {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-.food_product img.is_loading {
-  opacity: 1;
 }
 .food_product .tytle_food {
   margin-bottom: 10px;
@@ -469,7 +473,6 @@ header {
   font-size: 18px;
   font-weight: 500;
 }
-
 .box_about_technique {
   position: absolute;
   overflow: hidden;
@@ -779,7 +782,7 @@ section.benefits {
     position: absolute;
     display: block;
     top: 0;
-    right: -200%;
+    right: -25%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
@@ -857,24 +860,6 @@ section.benefits {
   background-image: url("../images/images/border-project.png");
   background-position: center;
   background-repeat: repeat-x;
-}
-
-button[data-atribute=prev-switch] {
-  background-image: url(../images/images/arrow-prev.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-button[data-atribute=prev-switch]:active {
-  background-image: url(../images/images/arrow-prev-hover.png);
-}
-
-button[data-atribute=next-switch] {
-  background-image: url(../images/images/arrow-next.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-button[data-atribute=next-switch]:active {
-  background-image: url(../images/images/arrow-next-hover.png);
 }
 
 .project_element {
@@ -1064,14 +1049,14 @@ address svg {
 @media screen and (min-width: 1200px) {
   .bread_with_egg {
     position: absolute;
+    display: block;
     bottom: 7%;
     left: -25%;
+    -webkit-transition: all 1000ms ease;
+    transition: all 1000ms ease;
     z-index: 2;
   }
   .bread_with_egg.is_loading {
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    display: block;
     left: 0;
   }
 }
@@ -1082,14 +1067,14 @@ address svg {
 @media screen and (min-width: 1200px) {
   .bread_with_cheese {
     position: absolute;
+    display: block;
     bottom: 30%;
     right: -25%;
     z-index: 2;
+    -webkit-transition: all 1000ms ease;
+    transition: all 1000ms ease;
   }
   .bread_with_cheese.is_loading {
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    display: block;
     right: 0;
   }
 }/*# sourceMappingURL=style.css.map */

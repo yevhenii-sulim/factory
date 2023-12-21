@@ -27,9 +27,11 @@
   position: relative;
   display: inline-block;
   opacity: 0;
-  transition: all 200ms ease;
+  transform: scale(0.4);
+  transition: all 1000ms ease;
   &.is_loading {
     opacity: 1;
+    transform: scale(1);
   }
   .mark {
     position: absolute;
@@ -61,20 +63,18 @@
   right: 19%;
 }
 .food_product {
-  display: none;
-  @media screen and (min-width: 1200px) {
-    display: block;
-    color: #7d7d7d;
+  color: #7d7d7d;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: all 200ms ease;
+  &.is_loading {
+    opacity: 1;
+    transform: scale(1);
   }
   img {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
-    transition: all 200ms ease;
-    &.is_loading {
-      opacity: 1;
-    }
   }
   .tytle_food {
     margin-bottom: 10px;
@@ -84,6 +84,8 @@
   .text_food {
     font-size: 18px;
     font-weight: 500;
+  }
+  @media screen and (min-width: 1200px) {
   }
 }
 

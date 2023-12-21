@@ -91,9 +91,8 @@ section.benefits {
     position: absolute;
     display: block;
     top: 0;
-    right: -200%;
+    right: -25%;
     transform: translateY(-50%);
-
     &.is_loading {
       right: 0;
     }
