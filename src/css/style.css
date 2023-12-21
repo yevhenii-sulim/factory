@@ -244,8 +244,10 @@ header {
   padding-top: 170px;
   padding-bottom: 240px;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/images/board-480.png");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/images/board-480.png");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/images/background-480.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/images/background-480.png");
+  background-size: contain;
+  background-color: #e8f4f3;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
