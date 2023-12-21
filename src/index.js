@@ -36,17 +36,18 @@ let options = {
 };
 
 let observerValue = new IntersectionObserver(loadingValue, options);
-export let targetValue = document.querySelector('address');
-observerValue.observe(targetValue);
+export let targetValue = document.querySelector('.adress_img');
 
 let observerWood = new IntersectionObserver(loadingWood, options);
 export let targetWood = document.querySelector('.box_our_benefits');
-observerWood.observe(targetWood);
 
 let observerProduct = new IntersectionObserver(loadingProduct, options);
 export let targetProduct = document.querySelector('#observer_product');
-observerProduct.observe(targetProduct);
 
 let observer = new IntersectionObserver(addClass, options);
 export let target = document.querySelector('[data-atrebute="myRootGreeting"]');
+
+observerValue.observe(targetValue);
+observerWood.observe(targetWood);
+observerProduct.observe(targetProduct);
 observer.observe(target);

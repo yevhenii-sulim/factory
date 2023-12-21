@@ -92,23 +92,11 @@ button[data-atribute='next-switch'] {
   }
   &:hover p {
     border: none;
-    padding-bottom: 1px;
+    @media screen and (max-width: 1199px) {
+      padding-bottom: 1px;
+    }
   }
-  // &::after {
-  //   content: '';
-  //   right: 0;
-  //   bottom: 0;
-  //   position: absolute;
-  //   width: 0%;
-  //   height: 2px;
-  //   border-radius: 0;
-  //   background: #c8a674;
-  //   transition: width 200ms ease;
-  // }
-  // &:hover::after {
-  //   width: 100%;
-  //   border-radius: 1px;
-  // }
+
   &:hover {
     border-left: 2px solid #c8a674;
     border-right: 2px solid #c8a674;

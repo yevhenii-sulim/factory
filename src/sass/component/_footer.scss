@@ -3,6 +3,9 @@ footer {
   .container {
     margin-top: 35px;
   }
+  @media screen and (min-width: 1200px) {
+    overflow: hidden;
+  }
 }
 .border_top {
   margin-bottom: 64px;
@@ -37,7 +40,7 @@ footer {
   @media screen and (max-width: 768px) {
     width: 100%;
   }
-  img {
+  .adress_img {
     display: none;
     @media screen and (min-width: 768px) {
       display: block;
@@ -49,13 +52,17 @@ footer {
 
 address {
   position: absolute;
-  top: 16px;
+  z-index: 5;
+  top: -55;
   left: 50%;
   transform: translateX(-50%);
   text-align: left;
   width: 100%;
   padding: 0 40px;
-
+  font-style: normal;
+  @media screen and (min-width: 768px) {
+    top: 16px;
+  }
   a {
     text-decoration: none;
     color: #7d7d7d;
@@ -93,12 +100,13 @@ address {
   display: none;
   @media screen and (min-width: 1200px) {
     position: absolute;
-    top: 25%;
-    left: -200%;
-    transition: all 500ms ease;
+    bottom: 7%;
+    left: -25%;
+    z-index: 2;
     &.is_loading {
-      left: 0;
+      transition: all 500ms ease;
       display: block;
+      left: 0;
     }
   }
 }
@@ -106,12 +114,13 @@ address {
   display: none;
   @media screen and (min-width: 1200px) {
     position: absolute;
-    bottom: 0;
-    right: -200%;
-    transition: all 500ms ease;
+    bottom: 30%;
+    right: -25%;
+    z-index: 2;
     &.is_loading {
-      right: 0;
+      transition: all 500ms ease;
       display: block;
+      right: 0;
     }
   }
 }

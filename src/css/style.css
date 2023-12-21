@@ -6,13 +6,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "flowbold";
-  src: url("../fonts/FlowBold/flow_b-webfont.eot");
-  src: url("../fonts/FlowBold/flow_b-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/FlowBold/flow_b-webfont.woff2") format("woff2"), url("../fonts/FlowBold/flow_b-webfont.woff") format("woff"), url("../fonts/FlowBold/flow_b-webfont.ttf") format("truetype"), url("../fonts/FlowBold/flow_b-webfont.svg#flowbold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
   font-family: "pf_din_text_comp_probold";
   src: url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.eot");
   src: url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.woff2") format("woff2"), url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.woff") format("woff"), url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.ttf") format("truetype"), url("../fonts/PFDinTextCompPro-Medium/pfdintextcomppro-bold-webfont.svg#pf_din_text_comp_probold") format("svg");
@@ -228,6 +221,7 @@ img {
 h1 {
   font-size: 32px;
   text-align: center;
+  font-family: "flowregular";
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -584,155 +578,6 @@ header {
   cursor: pointer;
 }
 
-footer {
-  position: relative;
-}
-footer .container {
-  margin-top: 35px;
-}
-
-.border_top {
-  margin-bottom: 64px;
-  position: relative;
-}
-.border_top:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: calc(40% - 20px);
-  height: 2px;
-  background: #cdcdcd;
-}
-.border_top:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: calc(40% - 20px);
-  height: 2px;
-  background: #cdcdcd;
-}
-.border_top img {
-  margin: auto;
-}
-
-.address {
-  position: relative;
-  display: inline-block;
-}
-@media screen and (max-width: 768px) {
-  .address {
-    width: 100%;
-  }
-}
-.address img {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .address img {
-    display: block;
-    margin: auto;
-    height: 300px;
-  }
-}
-
-address {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-align: left;
-  width: 100%;
-  padding: 0 40px;
-}
-address a {
-  text-decoration: none;
-  color: #7d7d7d;
-  font-size: 20px;
-}
-address h5 {
-  color: #c8a674;
-  font-size: 22px;
-  text-align: center;
-}
-address ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  address ul {
-    padding-left: 80px;
-  }
-}
-address svg {
-  fill: #7d7d7d;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact {
-  width: 100%;
-}
-.contact a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-}
-
-.bread_with_egg {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .bread_with_egg {
-    position: absolute;
-    top: 25%;
-    left: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-  }
-  .bread_with_egg.is_loading {
-    left: 0;
-    display: block;
-  }
-}
-
-.bread_with_cheese {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .bread_with_cheese {
-    position: absolute;
-    bottom: 0;
-    right: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-  }
-  .bread_with_cheese.is_loading {
-    right: 0;
-    display: block;
-  }
-}
-
 .backdrop {
   position: fixed;
   display: none;
@@ -1057,7 +902,11 @@ button[data-atribute=next-switch]:active {
 }
 .project_element:hover p {
   border: none;
-  padding-bottom: 1px;
+}
+@media screen and (max-width: 1199px) {
+  .project_element:hover p {
+    padding-bottom: 1px;
+  }
 }
 .project_element:hover {
   border-left: 2px solid #c8a674;
@@ -1085,6 +934,11 @@ footer {
 }
 footer .container {
   margin-top: 35px;
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    overflow: hidden;
+  }
 }
 
 .border_top {
@@ -1126,11 +980,11 @@ footer .container {
     width: 100%;
   }
 }
-.address img {
+.address .adress_img {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .address img {
+  .address .adress_img {
     display: block;
     margin: auto;
     height: 300px;
@@ -1139,13 +993,20 @@ footer .container {
 
 address {
   position: absolute;
-  top: 16px;
+  z-index: 5;
+  top: -55;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: left;
   width: 100%;
   padding: 0 40px;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+  address {
+    top: 16px;
+  }
 }
 address a {
   text-decoration: none;
@@ -1201,14 +1062,15 @@ address svg {
 @media screen and (min-width: 1200px) {
   .bread_with_egg {
     position: absolute;
-    top: 25%;
-    left: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+    bottom: 7%;
+    left: -25%;
+    z-index: 2;
   }
   .bread_with_egg.is_loading {
-    left: 0;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     display: block;
+    left: 0;
   }
 }
 
@@ -1218,13 +1080,14 @@ address svg {
 @media screen and (min-width: 1200px) {
   .bread_with_cheese {
     position: absolute;
-    bottom: 0;
-    right: -200%;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+    bottom: 30%;
+    right: -25%;
+    z-index: 2;
   }
   .bread_with_cheese.is_loading {
-    right: 0;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     display: block;
+    right: 0;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -43,15 +43,17 @@ export function loadingWood(entries, observer) {
 export function loadingValue(entries, observer) {
   entries.forEach(element => {
     if (element.isIntersecting) {
-      const egg = document.querySelector('.bread_with_egg '),
-        cheese = document.querySelector('.bread_with_cheese');
-      egg.style.display = 'block';
-      cheese.style.display = 'block';
-      setTimeout(() => {
-        egg.classList.add('is_loading');
-        cheese.classList.add('is_loading');
-      }, 100);
-      observer.unobserve(targetValue);
+      if (window.innerWidth >= 1200) {
+        const egg = document.querySelector('.bread_with_egg ');
+        const cheese = document.querySelector('.bread_with_cheese');
+        cheese.style.display = 'block';
+        egg.style.display = 'block';
+        setTimeout(() => {
+          egg.classList.add('is_loading');
+          cheese.classList.add('is_loading');
+        }, 100);
+        observer.unobserve(targetValue);
+      }
     }
   });
 }
