@@ -243,9 +243,9 @@ header {
   padding-top: 170px;
   padding-bottom: 240px;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/images/background-480.png");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/images/background-480.png");
-  background-size: contain;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/images/board-480.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/images/board-480.png");
+  background-size: cover;
   background-color: #e8f4f3;
   background-position: center;
   background-repeat: no-repeat;
@@ -269,6 +269,32 @@ header {
   position: absolute;
   bottom: 20px;
   left: 10%;
+}
+
+.img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 0;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .greeting {
@@ -480,13 +506,15 @@ header {
   width: 230px;
   min-height: 150px;
 }
-.box_about_technique ul {
+
+.box_technique {
   position: absolute;
   font-size: 0;
   width: 1200px;
-  -webkit-transition: left 250ms ease;
-  transition: left 250ms ease;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
   text-align: left;
+  opacity: 1;
   left: 0;
   top: 0;
 }
