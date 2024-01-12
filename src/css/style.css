@@ -870,9 +870,10 @@ section.benefits {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 16px;
   cursor: pointer;
   position: relative;
   border-left: 0px solid #c8a674;
@@ -887,33 +888,28 @@ section.benefits {
   width: 300px;
   height: auto;
 }
-.project_element:hover p {
-  border: none;
-}
-@media screen and (max-width: 1199px) {
-  .project_element:hover p {
-    padding-bottom: 1px;
-  }
-}
 .project_element:hover {
   border-left: 2px solid #c8a674;
   border-right: 2px solid #c8a674;
 }
 
 .sign_project {
-  border-bottom: 1px solid #959595;
   font-size: 24px;
   color: #7d7d7d;
   font-family: "flowregular";
 }
-@media screen and (min-width: 1200px) {
-  .sign_project {
-    border-bottom: none;
-  }
-}
 
 .show_at_project {
   margin-bottom: 60px;
+}
+
+.description {
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 14px;
+  font-family: "flowregular";
+  width: 300px;
 }
 
 footer {

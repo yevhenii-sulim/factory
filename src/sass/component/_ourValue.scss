@@ -61,7 +61,8 @@
 .project_element {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
   cursor: pointer;
   position: relative;
   border-left: 0px solid #c8a674;
@@ -74,12 +75,6 @@
     width: 300px;
     height: auto;
   }
-  &:hover p {
-    border: none;
-    @media screen and (max-width: 1199px) {
-      padding-bottom: 1px;
-    }
-  }
 
   &:hover {
     border-left: 2px solid #c8a674;
@@ -88,15 +83,19 @@
 }
 
 .sign_project {
-  border-bottom: 1px solid #959595;
   font-size: 24px;
   color: #7d7d7d;
   font-family: $flow;
-  @media screen and (min-width: 1200px) {
-    border-bottom: none;
-  }
 }
 
 .show_at_project {
   margin-bottom: 60px;
+}
+.description {
+  text-align: left;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 14px;
+  font-family: $flow;
+  width: 300px;
 }
