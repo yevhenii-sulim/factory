@@ -1,8 +1,7 @@
 @font-face {
   font-family: "flowregular";
   src: url("../fonts/Flow/flow-webfont.eot");
-  src: url("../fonts/Flow/flow-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Flow/flow-webfont.woff2") format("woff2"), url("../fonts/Flow/flow-webfont.woff") format("woff"), url("../fonts/Flow/flow-webfont.ttf") format("truetype"), url("../fonts/Flow/flow-webfont.svg#flowregular") format("svg");
-  font-weight: normal;
+  src: url("../fonts/Flow/flow-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Flow/flow-webfont.woff2") format("woff2"), url("../fonts/Flow/flow-webfont.woff") format("woff"), url("../fonts/Flow/flow-webfont.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
@@ -896,7 +895,8 @@ section.benefits {
 .sign_project {
   font-size: 24px;
   color: #7d7d7d;
-  font-family: "flowregular";
+  font-family: "pf_din_text_comp_proregular";
+  letter-spacing: 1.5px;
 }
 
 .show_at_project {
@@ -910,6 +910,7 @@ section.benefits {
   font-size: 14px;
   font-family: "flowregular";
   width: 300px;
+  font-weight: 500;
 }
 
 footer {
