@@ -1,5 +1,5 @@
 import { targetProduct, targetProject, targetValue } from '..';
-import data from '../data.json';
+import { data } from '../data.js';
 import { createProjectComponent } from './projectComponent';
 
 export function loadingProduct(entries, observer) {

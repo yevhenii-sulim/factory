@@ -1,3 +1,6 @@
+function addImg(img) {
+  require(img);
+}
 export function createProjectComponent(projects) {
   return projects
     .map(({ id, img, link, tytle, describe }) => {
