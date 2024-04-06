@@ -38,9 +38,6 @@ let options = {
 let observerValue = new IntersectionObserver(loadingValue, options);
 export let targetValue = document.querySelector('.adress_img');
 
-let observerWood = new IntersectionObserver(loadingWood, options);
-export let targetWood = document.querySelector('.box_our_benefits');
-
 let observerProduct = new IntersectionObserver(loadingProduct, options);
 export let targetProduct = document.querySelector('#observer_product');
 
@@ -49,5 +46,4 @@ export let targetProject = document.querySelector('#mark');
 
 observerProject.observe(targetProject);
 observerValue.observe(targetValue);
-observerWood.observe(targetWood);
 observerProduct.observe(targetProduct);

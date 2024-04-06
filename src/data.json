@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "factory/images/images/feedback.png",
+    "img": "/factory/src/images/images/feedback.png",
     "link": "https://yevhenii-sulim.github.io/feedback/",
     "tytle": "Feedback",
     "describe": "React, CSS-JS (styled-components). Розраховує відсоток позитивних відгуків"

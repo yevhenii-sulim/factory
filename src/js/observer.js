@@ -1,7 +1,6 @@
-import { targetProduct, targetProject, targetValue, targetWood } from '..';
+import { targetProduct, targetProject, targetValue } from '..';
 import data from '../data.json';
 import { createProjectComponent } from './projectComponent';
-console.log(data);
 
 export function loadingProduct(entries, observer) {
   entries.forEach(element => {
@@ -9,15 +8,6 @@ export function loadingProduct(entries, observer) {
       document.querySelector('.food_product').classList.add('is_loading');
       document.querySelector('.book_product').classList.add('is_loading');
       observer.unobserve(targetProduct);
-    }
-  });
-}
-
-export function loadingWood(entries, observer) {
-  entries.forEach(element => {
-    if (element.isIntersecting) {
-      document.querySelector('.wood ').classList.add('is_loading');
-      observer.unobserve(targetWood);
     }
   });
 }

@@ -4,7 +4,7 @@ export function createProjectComponent(projects) {
       return `
     <li class="project_element" data-project="${id}">
           <a href="${link}">
-            <img src="${img}" alt="${tytle}" />
+            <img src=${img} alt="${tytle}" />
           </a>
           <div class="about_project">
             <p class="sign_project">${tytle}</p>
