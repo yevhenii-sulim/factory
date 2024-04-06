@@ -1,22 +1,7 @@
-import { target, targetProduct, targetValue, targetWood } from '..';
-
-export function addClass(entries, observer) {
-  entries.forEach(element => {
-    // if (window.innerWidth >= 1200) {
-    if (element.isIntersecting) {
-      const man = document.querySelector('.man_greeting');
-      const girl = document.querySelector('.girl_greeting');
-      // man.style.display = 'block';
-      // girl.style.display = 'block';
-      // setTimeout(() => {
-      man.classList.add('is_loading');
-      girl.classList.add('is_loading');
-      observer.unobserve(target);
-      // }, 100);
-      // }
-    }
-  });
-}
+import { targetProduct, targetProject, targetValue, targetWood } from '..';
+import data from '../data.json';
+import { createProjectComponent } from './projectComponent';
+console.log(data);
 
 export function loadingProduct(entries, observer) {
   entries.forEach(element => {
@@ -45,6 +30,44 @@ export function loadingValue(entries, observer) {
       egg.classList.add('is_loading');
       cheese.classList.add('is_loading');
       observer.unobserve(targetValue);
+    }
+  });
+}
+
+let proj = 0;
+const projects = document.querySelector('.box_project');
+
+if (window.innerWidth >= 1200) {
+  projects.insertAdjacentHTML(
+    'beforeend',
+    createProjectComponent(data.slice(proj, proj + 3))
+  );
+} else {
+  projects.insertAdjacentHTML(
+    'beforeend',
+    createProjectComponent(data.slice(proj, proj + 3))
+  );
+}
+
+export function loadingProject(entries, observer) {
+  entries.forEach(element => {
+    if (element.isIntersecting) {
+      if (window.innerWidth >= 1200) {
+        proj += 3;
+        projects.insertAdjacentHTML(
+          'beforeend',
+          createProjectComponent(data.slice(proj, proj + 3))
+        );
+      } else {
+        proj += 1;
+        projects.insertAdjacentHTML(
+          'beforeend',
+          createProjectComponent(data.slice(proj, proj + 1))
+        );
+      }
+      if (proj >= data.length) {
+        observer.unobserve(targetProject);
+      }
     }
   });
 }

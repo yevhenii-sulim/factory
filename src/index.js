@@ -1,8 +1,8 @@
 import { turnCaruselNext, turnCaruselPrev } from './js/turnCarusel';
 import { openModal, onCloseModal } from './js/toggleModal';
 import {
-  addClass,
   loadingProduct,
+  loadingProject,
   loadingValue,
   loadingWood,
 } from './js/observer';
@@ -31,7 +31,7 @@ body.addEventListener('click', onCloseModal);
 
 let options = {
   root: null,
-  rootMargin: '200px',
+  rootMargin: '10px',
   threshold: 1.0,
 };
 
@@ -44,10 +44,10 @@ export let targetWood = document.querySelector('.box_our_benefits');
 let observerProduct = new IntersectionObserver(loadingProduct, options);
 export let targetProduct = document.querySelector('#observer_product');
 
-let observer = new IntersectionObserver(addClass, options);
-export let target = document.querySelector('[data-atrebute="myRootGreeting"]');
+let observerProject = new IntersectionObserver(loadingProject, options);
+export let targetProject = document.querySelector('#mark');
 
+observerProject.observe(targetProject);
 observerValue.observe(targetValue);
 observerWood.observe(targetWood);
 observerProduct.observe(targetProduct);
-observer.observe(target);

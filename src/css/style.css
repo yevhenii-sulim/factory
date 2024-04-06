@@ -567,7 +567,7 @@ header {
 .tytle_book {
   position: absolute;
   top: 21%;
-  right: 22%;
+  right: 20%;
   color: #caa977;
   font-size: 36px;
   text-align: center;
@@ -854,7 +854,6 @@ section.benefits {
   margin: auto;
   position: relative;
   overflow: hidden;
-  margin-bottom: 42px;
 }
 
 .box_project {
@@ -890,6 +889,7 @@ section.benefits {
 }
 
 .project_element {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,11 +909,33 @@ section.benefits {
   -webkit-transition: border-right 200ms ease, border-left 200ms ease;
   transition: border-right 200ms ease, border-left 200ms ease;
   border-radius: 10px;
+  -webkit-animation: loading 1000ms ease;
+          animation: loading 1000ms ease;
 }
 .project_element img {
   border-radius: 10px;
   width: 300px;
   height: auto;
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0;
+    left: -100px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+    left: -100px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 .project_element:hover {
   border-left: 2px solid #c8a674;
