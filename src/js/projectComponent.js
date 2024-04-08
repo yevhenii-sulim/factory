@@ -4,6 +4,7 @@ export function createProjectComponent(projects) {
       console.log(img);
       return `
     <li class="project_element" data-project="${id}">
+    ${id}
           <a href="${link}">
             <img src="./images/images/feedback.png" alt="${tytle}" />
           <div class="about_project">

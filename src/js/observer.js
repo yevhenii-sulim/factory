@@ -47,8 +47,10 @@ export function loadingProject(entries, observer) {
         proj += 3;
         projects.insertAdjacentHTML(
           'beforeend',
-          createProjectComponent(data.slice(proj, proj + 3))
+          createProjectComponent(data.slice(proj, data.length))
         );
+        observer.unobserve(targetProject);
+        return;
       } else {
         proj += 1;
         projects.insertAdjacentHTML(
