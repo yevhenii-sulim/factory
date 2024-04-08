@@ -1,11 +1,6 @@
 import { turnCaruselNext, turnCaruselPrev } from './js/turnCarusel';
 import { openModal, onCloseModal } from './js/toggleModal';
-import {
-  loadingProduct,
-  loadingProject,
-  loadingValue,
-  loadingWood,
-} from './js/observer';
+import { loadingProduct, loadingProject, loadingValue } from './js/observer';
 const [prev, next, boxTechnique, aboutTechnique, detailsProduct, body] = [
   '[data-atribute="prev"]',
   '[data-atribute="next"]',

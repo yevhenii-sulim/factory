@@ -27,6 +27,7 @@ export function loadingValue(entries, observer) {
 let proj = 0;
 const projects = document.querySelector('.box_project');
 
+projects.innerHTML = '';
 if (window.innerWidth >= 1200) {
   projects.insertAdjacentHTML(
     'beforeend',
@@ -35,7 +36,7 @@ if (window.innerWidth >= 1200) {
 } else {
   projects.insertAdjacentHTML(
     'beforeend',
-    createProjectComponent(data.slice(proj, proj + 3))
+    createProjectComponent(data.slice(proj, proj + 1))
   );
 }
 

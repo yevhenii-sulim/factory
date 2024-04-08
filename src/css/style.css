@@ -909,14 +909,22 @@ section.benefits {
   -webkit-transition: border-right 200ms ease, border-left 200ms ease;
   transition: border-right 200ms ease, border-left 200ms ease;
   border-radius: 10px;
-  -webkit-animation: loading 1000ms ease;
-          animation: loading 1000ms ease;
+  -webkit-animation: loading 250ms ease;
+          animation: loading 250ms ease;
 }
 .project_element img {
   border-radius: 10px;
   width: 300px;
   height: auto;
 }
+.project_element a {
+  text-decoration: none;
+}
+.project_element:hover {
+  border-left: 2px solid #c8a674;
+  border-right: 2px solid #c8a674;
+}
+
 @-webkit-keyframes loading {
   0% {
     opacity: 0;
@@ -927,6 +935,7 @@ section.benefits {
     left: 0;
   }
 }
+
 @keyframes loading {
   0% {
     opacity: 0;
@@ -937,16 +946,9 @@ section.benefits {
     left: 0;
   }
 }
-.project_element:hover {
-  border-left: 2px solid #c8a674;
-  border-right: 2px solid #c8a674;
-}
-
 .sign_project {
   font-size: 24px;
-  color: #7d7d7d;
-  font-family: "pf_din_text_comp_proregular";
-  letter-spacing: 1.5px;
+  color: #c8a674;
 }
 
 .show_at_project {
@@ -960,6 +962,13 @@ section.benefits {
   font-size: 18px;
   width: 300px;
   font-weight: 500;
+}
+
+.about_project {
+  color: #7d7d7d;
+  font-family: "pf_din_text_comp_proregular";
+  line-height: 1.5;
+  letter-spacing: 1.5px;
 }
 
 footer {

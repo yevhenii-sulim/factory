@@ -70,35 +70,36 @@
   border-top: 0px solid #c8a674;
   transition: border-right 200ms ease, border-left 200ms ease;
   border-radius: 10px;
-  animation:loading 250ms ease;
+  animation: loading 250ms ease;
   img {
     border-radius: 10px;
     width: 300px;
     height: auto;
   }
-
-@keyframes loading {
-  0% {
-    opacity:0;
-    left:-100px,
+  a {
+    text-decoration: none;
   }
-  100%{
-    opacity:1;
-    left:0
-  }
-}
-
   &:hover {
     border-left: 2px solid #c8a674;
     border-right: 2px solid #c8a674;
   }
 }
 
+@keyframes loading {
+  0% {
+    opacity: 0;
+    left: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
 .sign_project {
   font-size: 24px;
-  color: #7d7d7d;
-  font-family: $compPro;
-  letter-spacing: 1.5px;
+  color: #c8a674;
 }
 
 .show_at_project {
@@ -111,4 +112,10 @@
   font-size: 18px;
   width: 300px;
   font-weight: 500;
+}
+.about_project {
+  color: #7d7d7d;
+  font-family: $compPro;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
 }
