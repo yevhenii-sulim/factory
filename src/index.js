@@ -1,6 +1,9 @@
 import { turnCaruselNext, turnCaruselPrev } from './js/turnCarusel';
 import { openModal, onCloseModal } from './js/toggleModal';
-import { loadingProduct, loadingProject, loadingValue } from './js/observer';
+import { initObserverProduct } from './js/observerProduct';
+import { initObserverFood } from './js/observerFood';
+import { initObserverProject } from './js/observerProject';
+
 const [prev, next, boxTechnique, aboutTechnique, detailsProduct, body] = [
   '[data-atribute="prev"]',
   '[data-atribute="next"]',
@@ -9,6 +12,18 @@ const [prev, next, boxTechnique, aboutTechnique, detailsProduct, body] = [
   '.details_product',
   'body',
 ].map(item => document.querySelector(item));
+
+export const dataProjects = document.querySelectorAll('.project_element');
+export const projects = document.querySelector('.box_project');
+export let proj = 0;
+
+projects.innerHTML = '';
+if (window.innerWidth >= 1200) {
+  projects.append(...Array.from(dataProjects).slice(proj, proj + 3));
+} else {
+  projects.append(...Array.from(dataProjects).slice(proj, proj + 1));
+}
+
 const listElements = boxTechnique.children;
 const widthBoxList = aboutTechnique.offsetWidth;
 prev.addEventListener('click', () =>
@@ -24,21 +39,6 @@ detailsProduct.addEventListener('click', () =>
 
 body.addEventListener('click', onCloseModal);
 
-let options = {
-  root: null,
-  rootMargin: '10px',
-  threshold: 1.0,
-};
-
-let observerValue = new IntersectionObserver(loadingValue, options);
-export let targetValue = document.querySelector('.adress_img');
-
-let observerProduct = new IntersectionObserver(loadingProduct, options);
-export let targetProduct = document.querySelector('#observer_product');
-
-let observerProject = new IntersectionObserver(loadingProject, options);
-export let targetProject = document.querySelector('#mark');
-
-observerProject.observe(targetProject);
-observerValue.observe(targetValue);
-observerProduct.observe(targetProduct);
+initObserverFood();
+initObserverProject();
+initObserverProduct();
